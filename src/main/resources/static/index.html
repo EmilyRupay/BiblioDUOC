@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca DUOC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container mt-4">
+    <!-- Hero -->
+    <div class="text-center p-4 bg-primary text-white rounded">
+      <h1><i class="bi bi-journal-bookmark-fill"></i> Biblioteca DUOC</h1>
+      <p class="lead">Administra tus libros fácilmente</p>
+    </div>
+
+    <!-- Tabla de libros -->
+    <div class="card mt-4 p-3">
+      <h2><i class="bi bi-book-half"></i> Lista de Libros</h2>
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+          </tr>
+        </thead>
+        <tbody id="libros-lista"></tbody>
+      </table>
+    </div>
+
+    <!-- Formulario -->
+    <div class="card mt-4 p-4">
+      <h2><i class="bi bi-bookmark-plus-fill"></i> Agregar Libro</h2>
+      <form id="form-libro">
+        <input type="text" id="titulo" placeholder="Título" class="form-control mb-2" required />
+        <input type="text" id="autor" placeholder="Autor" class="form-control mb-3" required />
+        <button type="submit" class="btn btn-success">
+          <i class="bi bi-plus-circle-fill"></i> Guardar Libro
+
+
+
+          <!-- Tabla de Préstamos -->
+<div class="card mt-4 p-3">
+  <h2><i class="bi bi-calendar-check-fill"></i> Lista de Préstamos</h2>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>RUN</th>
+        <th>ID Libro</th>
+        <th>Fecha Solicitud</th>
+        <th>Fecha Entrega</th>
+        <th>Días</th>
+        <th>Multas</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="prestamos-lista"></tbody>
+  </table>
+</div>
+
+<!-- Formulario de Préstamo -->
+<div class="card mt-4 p-4">
+  <h2><i class="bi bi-plus-square-fill"></i> Registrar Préstamo</h2>
+  <form id="form-prestamo">
+    <input type="text" id="run" placeholder="RUN del solicitante" class="form-control mb-2" required />
+    <input type="number" id="id_libro" placeholder="ID del Libro" class="form-control mb-2" required />
+    <input type="date" id="fecha_solicitud" class="form-control mb-2" required />
+    <input type="date" id="fecha_entrega" class="form-control mb-2" />
+    <input type="number" id="dias" placeholder="Cantidad de días" class="form-control mb-2" required />
+    <input type="number" id="multas" placeholder="Multas (si hay)" class="form-control mb-3" required />
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-check2-square"></i> Guardar Préstamo
+    </button>
+  </form>
+</div>
